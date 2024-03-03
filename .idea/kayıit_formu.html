@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python ile Veri Bilimi Başlangıç Kursu Kayıt Formu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffff00; /* Sarı arka plan */
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 400px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #6a0dad; /* Mor renk */
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        form {
+            margin-top: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="submit"] {
+            width: calc(100% - 12px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        input[type="tel"]::placeholder {
+            color: #999;
+        }
+        .patika-dev {
+            text-align: center;
+            color: #007bff; /* Mavi renk */
+            font-size: 14px;
+            margin-top: 20px;
+        }
+        .author {
+            text-align: center;
+            font-size: 12px;
+            color: #007bff; /* Mavi renk */
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2><span style="color: #6a0dad;">Patika.dev</span> ile Veri Bilimi Başlangıç Kursu Kayıt Formu</h2>
+    <form action="kayit.php" method="post">
+        <label for="ad">Adınız:</label>
+        <input type="text" id="ad" name="ad">
+
+        <label for="soyad">Soyadınız:</label>
+        <input type="text" id="soyad" name="soyad">
+
+        <label for="email">E-posta Adresiniz:</label>
+        <input type="email" id="email" name="email">
+
+        <label for="telefon">Telefon Numaranız:</label>
+        <input type="tel" id="telefon" name="telefon" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Örn: 555-555-5555">
+
+        <label for="soru">Neden bu kursa katılmak istiyorsunuz?</label>
+        <textarea id="soru" name="soru" rows="4"></textarea>
+
+        <input type="submit" value="Kayıt Ol">
+    </form>
+    <p class="patika-dev">Patika.dev</p>
+    <p class="author">Burak Öztürk tarafından hazırlanmıştır.</p>
+</div>
+</body>
+</html>
